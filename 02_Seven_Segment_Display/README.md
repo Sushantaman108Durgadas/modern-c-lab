@@ -52,3 +52,39 @@ segment[i].call_back = set_select_pin;
 segment[i].pin = segment[i].call_back(i);
 
 The function pointer is then reused for segment-pin mapping.
+```
+## Background
+
+This project was originally written approximately two years ago
+as a Semester 4 embedded systems assignment.
+
+I revisited the implementation while studying Modern C/C++ to
+understand how my design and programming approach has evolved.
+
+### Original Implementation
+
+The original version demonstrates my approach at the time:
+
+- Structures
+- Arrays
+- Lookup tables
+- Multiplexing
+- Programmatic pin configuration
+
+### Refactoring Experiment
+
+The second version was written recently as an experiment in applying
+function pointers to the original design.
+
+The goal was not simply to make the code shorter, but to explore
+how function pointers can introduce configurable behaviour and
+indirection.
+
+### Reflection
+
+The exercise also showed me that abstraction is not automatically
+better. For fixed relationships, the original direct implementation
+can be clearer.
+
+This project is therefore kept as a before/after comparison of my
+programming evolution.
